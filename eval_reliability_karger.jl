@@ -38,12 +38,11 @@ Must run multiple times to get desired probability of success.
 function test_karger()
     # Create undirected graphs
     graphs = Vector{Graph}()
-    push!(graphs, SimpleGraph(2))
-    push!(graphs, path_graph(4))
+    # push!(graphs, SimpleGraph(2))
+    # push!(graphs, path_graph(4))
     push!(graphs, complete_graph(5))
 
-    karger_prob_fail = 0.01
-    num_trials = 
+    karger_prob_fail = 0.5
 
     # Compute cost of minimum cut with Karger's Algorithm
     for (i, g) in enumerate(graphs)
@@ -54,8 +53,21 @@ function test_karger()
         # min_cut = karger_min_cut(g)
         # println("Minimum cut: ", min_cut)
         # println("Minimum cut cost: ", karger_cut_cost(g, min_cut))
-        num_trials = 
-        println("Min cut cost (Karger's multiple times): ", karger_multiple_min_cut(g, 2))
+
+        # Given delta = probability of failure
+        # Number of trials T >= n^2 * ln(1/delta) >= (n choose 2) * ln(1/deta)
+        num_trials = trunc(Int, nv(g) * nv(g) * log(1/karger_prob_fail)) + 1
+        num_trials = 3
+        println("Num Trials: ", num_trials)
+        count_correct = 0
+        total = 1e6
+        for j in 1:total
+            if karger_multiple_min_cut(g, num_trials) == 4
+                count_correct += 1
+            end
+        end
+        println("Prob correct = ", count_correct / total)
+        # println("Min cut cost (Karger's multiple times): ", karger_multiple_min_cut(g, num_trials))
     end
 
 end
