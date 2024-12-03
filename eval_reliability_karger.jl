@@ -35,7 +35,7 @@ Must run multiple times to get desired probability of success.
 
 """
 function test_karger()
-    # Create undirected graphs
+    # Create undirected graphs for testing
     graphs = Vector{Graph}()
     push!(graphs, SimpleGraph(2))
     push!(graphs, path_graph(4))
@@ -56,7 +56,6 @@ function test_karger()
         println("Min cut cost (Karger's multiple times): ", karger_multiple_min_cut(g, num_trials))
         println()
     end
-
 end
 
 test_karger()
