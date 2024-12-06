@@ -111,10 +111,10 @@ end
 function EnergyGridMDP(;
     g_init::Graph = SimpleGraph(),
     action_cost::Dict{Symbol, Int64} = Dict(
-        :addSupply => 1, :addStorage => 3, :addEdge => 1, :noAction => 0
+        :addSupply => 1, :addStorage => 1, :addEdge => 3, :noAction => 0
     ),
     reward_reliability::Function = karger_multiple_min_cut,
-    reward_alpha::Float64 = 0.7,
+    reward_alpha::Float64 = 10.0,
     discount_factor::Float64=0.9)
     return EnergyGridMDP(g_init, action_cost, reward_reliability, reward_alpha, discount_factor)
 end
@@ -155,7 +155,10 @@ end
 
 # Reward function: based on reliability, number of vertices, action
 function POMDPs.reward(mdp::EnergyGridMDP, s::EnergyGridState, a::EnergyGridAction)
-    return mdp.reward_alpha * mdp.reward_reliability(s.g) + (1-mdp.reward_alpha) * nv(s.g)
+    r_reliability = mdp.reward_reliability(s.g)
+    r_vertices = nv(s.g)
+    # println("Reward components: min cut = ", r_reliability, ", vertices = ", r_vertices)
+    return mdp.reward_alpha * r_reliability + r_vertices
 end
 
 # Discount
@@ -165,32 +168,89 @@ end
 
 
 """
-Test POMDP code
+Evaluate MDP with MCTS
 """
-mdp = EnergyGridMDP()
-# print(actions(mdp, EnergyGridState(SimpleGraph(5))))
-
+mdp = EnergyGridMDP(reward_alpha=5.0)    # Weight min_cut 10x as much as num vertices
 solver = MCTSSolver(n_iterations=100, depth=10, exploration_constant=10.0)
 mcts_planner = POMDPs.solve(solver, mdp)
 
-s0 = EnergyGridState(SimpleGraph(5), 12)
+s0 = EnergyGridState(SimpleGraph(), 50)     # Budget
+num_steps = 20
 s = s0
-total_reward = 0
-num_steps = 10
+
+# Metrics to track
+metrics::Dict{Symbol, Any} = Dict(
+    :reliability => 0,
+    :total_cost => 0,
+    :total_steps => 0,
+    :max_degree => 0,
+    :total_reward => 0,
+    :discounted_reward => 0    
+)
+
 action_order = Vector{EnergyGridAction}()
+
 for i in 1:num_steps
     println("Step ", i)
+
     a = action(mcts_planner, s)
     println("Action a: ", a)
     push!(action_order, a)
+    if metrics[:total_steps] == 0
+        metrics[:total_cost] += mdp.action_cost[a.action]
+    end
+
     global s, r = @gen(:sp, :r)(mdp, s, a, mcts_planner.rng)
-    global total_reward += r
+    println("Received reward: ", r)
+    metrics[:total_reward] += r
+    metrics[:discounted_reward] += mdp.discount_factor ^ (i-1) * r
+
     println("New state sp: ", s)
+    if metrics[:total_steps] == 0 && s.budget == 0
+        metrics[:total_steps] = i
+    end
+
     println()
 end
 
-println("List of actions: ", [(i, a.action) for (i, a) in enumerate(action_order)])
-println("Total reward: ", total_reward)
+# Compute metrics
+metrics[:reliability] = mdp.reward_reliability(s.g)
+# metrics[:max_degree] = 
+
+println("List of actions: ")
+println(action_order)
+# println([(i, a.action) for (i, a) in enumerate(action_order)])
+
+println("Metrics: ")
+println(metrics)
+
+println("Degrees: ", degree(s.g))
+
+
+"""Initial testing"""
+# # print(actions(mdp, EnergyGridState(SimpleGraph(5))))
+
+# solver = MCTSSolver(n_iterations=100, depth=10, exploration_constant=10.0)
+# mcts_planner = POMDPs.solve(solver, mdp)
+
+# s0 = EnergyGridState(SimpleGraph(5), 12)
+# s = s0
+# total_reward = 0
+# num_steps = 10
+# action_order = Vector{EnergyGridAction}()
+# for i in 1:num_steps
+#     println("Step ", i)
+#     a = action(mcts_planner, s)
+#     println("Action a: ", a)
+#     push!(action_order, a)
+#     global s, r = @gen(:sp, :r)(mdp, s, a, mcts_planner.rng)
+#     global total_reward += r
+#     println("New state sp: ", s)
+#     println()
+# end
+
+# println("List of actions: ", [(i, a.action) for (i, a) in enumerate(action_order)])
+# println("Total reward: ", total_reward)
 
 # Debugging outputs:
 # print(mcts_planner.rng)
