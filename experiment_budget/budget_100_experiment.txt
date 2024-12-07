@@ -1,0 +1,505 @@
+Step 1
+Action a: EnergyGridAction(:addSupply, nothing)
+Received reward: 100.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(0, [Int64[]]), 99)
+
+Step 2
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 103.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(0, [Int64[]]), 99)
+
+Step 3
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 103.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(0, [Int64[]]), 99)
+
+Step 4
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 103.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(0, [Int64[]]), 99)
+
+Step 5
+Action a: EnergyGridAction(:addStorage, nothing)
+Received reward: 103.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(0, [Int64[], Int64[]]), 98)
+
+Step 6
+Action a: EnergyGridAction(:addEdge, (1, 2))
+Received reward: 106.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(1, [[2], [1]]), 95)
+
+Step 7
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 133.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(1, [[2], [1]]), 95)
+
+Step 8
+Action a: EnergyGridAction(:addEdge, (1, 2))
+Received reward: 133.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(1, [[2], [1]]), 92)
+
+Step 9
+Action a: EnergyGridAction(:addEdge, (1, 2))
+Received reward: 130.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(1, [[2], [1]]), 89)
+
+Step 10
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 127.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(1, [[2], [1]]), 89)
+
+Step 11
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 127.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(1, [[2], [1]]), 89)
+
+Step 12
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 127.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(1, [[2], [1]]), 89)
+
+Step 13
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 127.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(1, [[2], [1]]), 89)
+
+Step 14
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 127.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(1, [[2], [1]]), 89)
+
+Step 15
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 127.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(1, [[2], [1]]), 89)
+
+Step 16
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 127.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(1, [[2], [1]]), 89)
+
+Step 17
+Action a: EnergyGridAction(:addSupply, nothing)
+Received reward: 127.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(1, [[2], [1], Int64[]]), 88)
+
+Step 18
+Action a: EnergyGridAction(:addEdge, (1, 3))
+Received reward: 100.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(1, [[2], [1], Int64[]]), 85)
+
+Step 19
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 97.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(1, [[2], [1], Int64[]]), 85)
+
+Step 20
+Action a: EnergyGridAction(:addEdge, (2, 3))
+Received reward: 97.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(1, [[2], [1], Int64[]]), 82)
+
+Step 21
+Action a: EnergyGridAction(:addEdge, (2, 3))
+Received reward: 94.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(2, [[2], [1, 3], [2]]), 79)
+
+Step 22
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 121.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(2, [[2], [1, 3], [2]]), 79)
+
+Step 23
+Action a: EnergyGridAction(:addEdge, (1, 3))
+Received reward: 121.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(2, [[2], [1, 3], [2]]), 76)
+
+Step 24
+Action a: EnergyGridAction(:addEdge, (1, 3))
+Received reward: 118.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), 73)
+
+Step 25
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 145.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), 73)
+
+Step 26
+Action a: EnergyGridAction(:addEdge, (2, 3))
+Received reward: 145.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), 70)
+
+Step 27
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 142.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), 70)
+
+Step 28
+Action a: EnergyGridAction(:addEdge, (2, 3))
+Received reward: 142.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), 67)
+
+Step 29
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 139.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), 67)
+
+Step 30
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 139.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), 67)
+
+Step 31
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 139.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), 67)
+
+Step 32
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 139.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), 67)
+
+Step 33
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 139.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), 67)
+
+Step 34
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 139.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), 67)
+
+Step 35
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 139.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), 67)
+
+Step 36
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 139.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), 67)
+
+Step 37
+Action a: EnergyGridAction(:addEdge, (1, 2))
+Received reward: 139.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), 64)
+
+Step 38
+Action a: EnergyGridAction(:addEdge, (2, 3))
+Received reward: 136.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), 61)
+
+Step 39
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 133.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), 61)
+
+Step 40
+Action a: EnergyGridAction(:addEdge, (1, 2))
+Received reward: 133.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), 58)
+
+Step 41
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 130.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), 58)
+
+Step 42
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 130.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), 58)
+
+Step 43
+Action a: EnergyGridAction(:addEdge, (1, 3))
+Received reward: 130.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), 55)
+
+Step 44
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 127.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), 55)
+
+Step 45
+Action a: EnergyGridAction(:addEdge, (1, 3))
+Received reward: 127.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), 52)
+
+Step 46
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 124.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), 52)
+
+Step 47
+Action a: EnergyGridAction(:addEdge, (2, 3))
+Received reward: 124.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), 49)
+
+Step 48
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 121.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), 49)
+
+Step 49
+Action a: EnergyGridAction(:addEdge, (1, 2))
+Received reward: 121.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), 46)
+
+Step 50
+Action a: EnergyGridAction(:addEdge, (2, 3))
+Received reward: 118.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), 43)
+
+Step 51
+Action a: EnergyGridAction(:addEdge, (1, 3))
+Received reward: 115.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), 40)
+
+Step 52
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 112.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), 40)
+
+Step 53
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 112.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), 40)
+
+Step 54
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 112.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), 40)
+
+Step 55
+Action a: EnergyGridAction(:addEdge, (1, 2))
+Received reward: 112.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), 37)
+
+Step 56
+Action a: EnergyGridAction(:addEdge, (2, 3))
+Received reward: 109.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), 34)
+
+Step 57
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 106.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), 34)
+
+Step 58
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 106.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), 34)
+
+Step 59
+Action a: EnergyGridAction(:addEdge, (1, 2))
+Received reward: 106.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), 31)
+
+Step 60
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 103.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), 31)
+
+Step 61
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 103.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), 31)
+
+Step 62
+Action a: EnergyGridAction(:addEdge, (2, 3))
+Received reward: 103.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), 28)
+
+Step 63
+Action a: EnergyGridAction(:addEdge, (2, 3))
+Received reward: 100.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), 25)
+
+Step 64
+Action a: EnergyGridAction(:addEdge, (2, 3))
+Received reward: 97.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), 22)
+
+Step 65
+Action a: EnergyGridAction(:addEdge, (2, 3))
+Received reward: 94.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), 19)
+
+Step 66
+Action a: EnergyGridAction(:addEdge, (1, 3))
+Received reward: 91.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), 16)
+
+Step 67
+Action a: EnergyGridAction(:addEdge, (1, 2))
+Received reward: 88.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), 13)
+
+Step 68
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 85.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), 13)
+
+Step 69
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 85.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), 13)
+
+Step 70
+Action a: EnergyGridAction(:addEdge, (1, 3))
+Received reward: 85.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), 10)
+
+Step 71
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 82.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), 10)
+
+Step 72
+Action a: EnergyGridAction(:addEdge, (1, 3))
+Received reward: 82.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), 7)
+
+Step 73
+Action a: EnergyGridAction(:addEdge, (2, 3))
+Received reward: 79.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), 4)
+
+Step 74
+Action a: EnergyGridAction(:addEdge, (1, 3))
+Received reward: 76.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), 1)
+
+Step 75
+Action a: EnergyGridAction(:addEdge, (1, 3))
+Received reward: 73.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), -2)
+
+Step 76
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 70.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), -2)
+
+Step 77
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 70.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), -2)
+
+Step 78
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 70.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), -2)
+
+Step 79
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 70.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), -2)
+
+Step 80
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 70.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), -2)
+
+Step 81
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 70.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), -2)
+
+Step 82
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 70.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), -2)
+
+Step 83
+Action a: EnergyGridAction(:addSupply, nothing)
+Received reward: 70.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), -3)
+
+Step 84
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 69.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), -3)
+
+Step 85
+Action a: EnergyGridAction(:addStorage, nothing)
+Received reward: 69.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), -4)
+
+Step 86
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 68.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), -4)
+
+Step 87
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 68.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), -4)
+
+Step 88
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 68.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), -4)
+
+Step 89
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 68.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), -4)
+
+Step 90
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 68.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), -4)
+
+Step 91
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 68.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), -4)
+
+Step 92
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 68.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), -4)
+
+Step 93
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 68.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), -4)
+
+Step 94
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 68.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), -4)
+
+Step 95
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 68.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), -4)
+
+Step 96
+Action a: EnergyGridAction(:addSupply, nothing)
+Received reward: 68.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), -5)
+
+Step 97
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 67.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), -5)
+
+Step 98
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 67.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), -5)
+
+Step 99
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 67.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), -5)
+
+Step 100
+Action a: EnergyGridAction(:noAction, nothing)
+Received reward: 67.0
+New state sp: EnergyGridState(SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), -5)
+
+List of actions:
+EnergyGridAction[EnergyGridAction(:addSupply, nothing), EnergyGridAction(:noAction, nothing), EnergyGridAction(:noAction, nothing), EnergyGridAction(:noAction, nothing), EnergyGridAction(:addStorage, nothing), EnergyGridAction(:addEdge, (1, 2)), EnergyGridAction(:noAction, nothing), EnergyGridAction(:addEdge, (1, 2)), EnergyGridAction(:addEdge, (1, 2)), EnergyGridAction(:noAction, nothing), EnergyGridAction(:noAction, nothing), EnergyGridAction(:noAction, nothing), EnergyGridAction(:noAction, nothing), EnergyGridAction(:noAction, nothing), EnergyGridAction(:noAction, nothing), EnergyGridAction(:noAction, nothing), EnergyGridAction(:addSupply, nothing), EnergyGridAction(:addEdge, (1, 3)), EnergyGridAction(:noAction, nothing), EnergyGridAction(:addEdge, (2, 3)), EnergyGridAction(:addEdge, (2, 3)), EnergyGridAction(:noAction, nothing), EnergyGridAction(:addEdge, (1, 3)), EnergyGridAction(:addEdge, (1, 3)), EnergyGridAction(:noAction, nothing), EnergyGridAction(:addEdge, (2, 3)), EnergyGridAction(:noAction, nothing), EnergyGridAction(:addEdge, (2, 3)), EnergyGridAction(:noAction, nothing), EnergyGridAction(:noAction, nothing), EnergyGridAction(:noAction, nothing), EnergyGridAction(:noAction, nothing), EnergyGridAction(:noAction, nothing), EnergyGridAction(:noAction, nothing), EnergyGridAction(:noAction, nothing), EnergyGridAction(:noAction, nothing), EnergyGridAction(:addEdge, (1, 2)), EnergyGridAction(:addEdge, (2, 3)), EnergyGridAction(:noAction, nothing), EnergyGridAction(:addEdge, (1, 2)), EnergyGridAction(:noAction, nothing), EnergyGridAction(:noAction, nothing), EnergyGridAction(:addEdge, (1, 3)), EnergyGridAction(:noAction, nothing), EnergyGridAction(:addEdge, (1, 3)), EnergyGridAction(:noAction, nothing), EnergyGridAction(:addEdge, (2, 3)), EnergyGridAction(:noAction, nothing), EnergyGridAction(:addEdge, (1, 2)), EnergyGridAction(:addEdge, (2, 3)), EnergyGridAction(:addEdge, (1, 3)), EnergyGridAction(:noAction, nothing), EnergyGridAction(:noAction, nothing), EnergyGridAction(:noAction, nothing), EnergyGridAction(:addEdge, (1, 2)), EnergyGridAction(:addEdge, (2, 3)), EnergyGridAction(:noAction, nothing), EnergyGridAction(:noAction, nothing), EnergyGridAction(:addEdge, (1, 2)), EnergyGridAction(:noAction, nothing), EnergyGridAction(:noAction, nothing), EnergyGridAction(:addEdge, (2, 3)), EnergyGridAction(:addEdge, (2, 3)), EnergyGridAction(:addEdge, (2, 3)), EnergyGridAction(:addEdge, (2, 3)), EnergyGridAction(:addEdge, (1, 3)), EnergyGridAction(:addEdge, (1, 2)), EnergyGridAction(:noAction, nothing), EnergyGridAction(:noAction, nothing), EnergyGridAction(:addEdge, (1, 3)), EnergyGridAction(:noAction, nothing), EnergyGridAction(:addEdge, (1, 3)), EnergyGridAction(:addEdge, (2, 3)), EnergyGridAction(:addEdge, (1, 3)), EnergyGridAction(:addEdge, (1, 3)), EnergyGridAction(:noAction, nothing), EnergyGridAction(:noAction, nothing), EnergyGridAction(:noAction, nothing), EnergyGridAction(:noAction, nothing), EnergyGridAction(:noAction, nothing), EnergyGridAction(:noAction, nothing), EnergyGridAction(:noAction, nothing), EnergyGridAction(:addSupply, nothing), EnergyGridAction(:noAction, nothing), EnergyGridAction(:addStorage, nothing), EnergyGridAction(:noAction, nothing), EnergyGridAction(:noAction, nothing), EnergyGridAction(:noAction, nothing), EnergyGridAction(:noAction, nothing), EnergyGridAction(:noAction, nothing), EnergyGridAction(:noAction, nothing), EnergyGridAction(:noAction, nothing), EnergyGridAction(:noAction, nothing), EnergyGridAction(:noAction, nothing), EnergyGridAction(:noAction, nothing), EnergyGridAction(:addSupply, nothing), EnergyGridAction(:noAction, nothing), EnergyGridAction(:noAction, nothing), EnergyGridAction(:noAction, nothing), EnergyGridAction(:noAction, nothing)]
+Metrics:
+Dict{Symbol, Any}(:max_degree => 0, :total_cost => 102, :discounted_reward => 1152.0093342487535, :total_steps => 75, :total_reward => 10387.0, :reliability => 2)
+Degrees: [2, 2, 2]
