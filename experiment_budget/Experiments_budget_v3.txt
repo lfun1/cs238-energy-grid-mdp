@@ -1,0 +1,22 @@
+beta_r_list = [5.0, 5.5, 6.0] 
+num_steps = 30
+
+Experiments:
+Dict{Any, Any}((30.0, 5.0, 50) => Dict{Symbol, Any}(:max_degree => 3, :total_cost => 47, :discounted_reward => 670.8509609088927, :total_steps => 0, :final_graph => SimpleGraph{Int64}(6, [[2, 3, 4], [1, 3, 4], [1, 2, 4], [1, 2, 3]]), :total_reward => 2308.0, :reliability => 3), (30.0, 5.5, 50) => Dict{Symbol, Any}(:max_degree => 2, :total_cost => 50, :discounted_reward => 695.6457088597753, :total_steps => 27, :final_graph => SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), :total_reward => 2506.0, :reliability => 2), (30.0, 6.0, 50) => Dict{Symbol, Any}(:max_degree => 2, :total_cost => 34, :discounted_reward => 741.7906140652092, :total_steps => 0, :final_graph => SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), :total_reward => 2758.0, :reliability => 2))
+evaluate_mdp_0
+
+
+num_steps = 20
+(Graphs not as good)
+
+Experiments:
+Dict{Any, Any}((30.0, 5.0, 50) => Dict{Symbol, Any}(:max_degree => 2, :total_cost => 18, :discounted_reward => 473.10174951505553, :total_steps => 0, :final_graph => SimpleGraph{Int64}(2, [[2, 3], [1], [1]]), :total_reward => 1141.0, :reliability => 1), (30.0, 5.0, 20) => Dict{Symbol, Any}(:max_degree => 2, :total_cost => 17, :discounted_reward => 223.96265826690882, :total_steps => 0, :final_graph => SimpleGraph{Int64}(2, [[2, 3], [1], [1]]), :total_reward => 621.0, :reliability => 1), (30.0, 5.0, 10) => Dict{Symbol, Any}(:max_degree => 1, :total_cost => 10, :discounted_reward => 94.55275812539799, :total_steps => 18, :final_graph => SimpleGraph{Int64}(1, [[3], Int64[], [1]]), :total_reward => 242.0, :reliability => 0))
+evaluate_mdp_0
+
+
+[Longer 100-step params]
+num_steps = 100
+(Not as good!)
+
+Experiments:
+Dict{Any, Any}((30.0, 5.0, 50) => Dict{Symbol, Any}(:max_degree => 2, :total_cost => 63, :discounted_reward => 680.3935248084462, :total_steps => 40, :final_graph => SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), :total_reward => 7363.0, :reliability => 2), (30.0, 5.0, 20) => Dict{Symbol, Any}(:max_degree => 1, :total_cost => 34, :discounted_reward => 241.3341749924565, :total_steps => 13, :final_graph => SimpleGraph{Int64}(1, [[2], [1], Int64[], Int64[]]), :total_reward => 1343.0, :reliability => 0), (30.0, 5.0, 100) => Dict{Symbol, Any}(:max_degree => 2, :total_cost => 104, :discounted_reward => 1238.345407601558, :total_steps => 68, :final_graph => SimpleGraph{Int64}(3, [[2, 3], [1, 3], [1, 2]]), :total_reward => 10283.0, :reliability => 2))

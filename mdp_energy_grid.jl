@@ -162,7 +162,7 @@ function POMDPs.reward(mdp::EnergyGridMDP, s::EnergyGridState, a::EnergyGridActi
     r_vertices = nv(s.g)
 
     # Initial reward function:
-    return mdp.reward_alpha * r_reliability + r_vertices
+    # return mdp.reward_alpha * r_reliability + r_vertices
 
     # Budget reward function:
     
@@ -182,8 +182,9 @@ Evaluate MDP with MCTS
 
 # Single full run of MCTS online planning
 function evaluate_mdp_2a(mdp::EnergyGridMDP, s0::EnergyGridState, num_steps::Int64, )
-    solver = MCTSSolver(n_iterations=100, depth=10, exploration_constant=10.0)
-    mcts_planner = POMDPs.solve(solver, mdp)
+    # solver_initial = MCTSSolver(n_iterations=100, depth=10, exploration_constant=10.0)
+    solver_budget = MCTSSolver(n_iterations=200, depth=20, exploration_constant=10.0)
+    mcts_planner = POMDPs.solve(solver_budget, mdp)
 
     # Metrics to track
     metrics::Dict{Symbol, Any} = Dict(
@@ -228,23 +229,30 @@ end
 
 # Initial Experiment: Evaluate MDP with different hyperparameters
 function evaluate_mdp_2()
-    alpha_r_list = [2.0, 5.0, 8.0]
-    budget_list = [10, 20, 50]
-    num_steps = 20
+    alpha_r_list = [30.0]
+    beta_r_list = [4.0]
+    # For 30 steps:
+    # Too high (indiv vertices): 10, 7
+    # Good: 5.5 (4 FC graph), 5.0 best
+    # Too low (limited complexity): 4
+    budget_list = [20, 50, 100] #[10, 20, 50] #100 #[20, 50, 100]
+    num_steps = 100
 
     experiments = Dict()
     
     for alpha_r in alpha_r_list
-        for budget in budget_list
-            mdp = EnergyGridMDP(reward_alpha=alpha_r)
-            s0 = EnergyGridState(SimpleGraph(), budget)     # Budget
-            println("New run")
-            println("Alpha_r = ", alpha_r, ". Budget = ", budget)
-            metrics = evaluate_mdp_2a(mdp, s0, num_steps)
-            println("Metrics:")
-            println(metrics)
-            experiments[(alpha_r, budget)] = metrics
-            println()
+        for beta_r in beta_r_list
+            for budget in budget_list
+                mdp = EnergyGridMDP(reward_alpha=alpha_r, reward_beta=beta_r)
+                s0 = EnergyGridState(SimpleGraph(), budget)     # Budget
+                println("New run")
+                println("Alpha_r = ", alpha_r, ". Budget = ", budget)
+                metrics = evaluate_mdp_2a(mdp, s0, num_steps)
+                println("Metrics:")
+                println(metrics)
+                experiments[(alpha_r, beta_r, budget)] = metrics
+                println()
+            end
         end
     end
 
