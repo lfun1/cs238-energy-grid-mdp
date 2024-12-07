@@ -226,7 +226,7 @@ function evaluate_mdp_2a(mdp::EnergyGridMDP, s0::EnergyGridState, num_steps::Int
     return metrics
 end
 
-# Evaluate MDP with different hyperparameters
+# Initial Experiment: Evaluate MDP with different hyperparameters
 function evaluate_mdp_2()
     alpha_r_list = [2.0, 5.0, 8.0]
     budget_list = [10, 20, 50]

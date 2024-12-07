@@ -13,6 +13,9 @@ budget_list = [10, 20, 50]
 
 for alpha_r in alpha_r_list
     for budget in budget_list
+        println("Experiment: alpha_r: ", alpha_r, ", budget: ", budget)
+        println(experiments_initial[(alpha_r, budget)])
+        println()
         # Plot each graph
         # plot = gplot(experiments_initial[(alpha_r, budget)][:final_graph], layout=circular_layout)
         # draw(PDF(string("./experiment_initial/graph_alpha_r_", alpha_r, "_budget_", budget, ".pdf"), 16cm, 16cm), plot)
